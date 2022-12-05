@@ -1,0 +1,22 @@
+<section class="top-space">
+  <h1>Principais posts</h1>
+  <article
+    class="d-flex flex-row justify-content-center"
+  >
+    <PostCard
+      *ngFor="let post of mostViewedPosts"
+      [post]="post">
+    </PostCard>
+  </article>
+</section>
+<section>
+  <h1>Recentes</h1>
+  <article
+    class="d-flex flex-row justify-content-center"
+  >
+    <PostCard
+      *ngFor="let post of recentPosts"
+      [post]="post">
+    </PostCard>
+  </article>
+</section>

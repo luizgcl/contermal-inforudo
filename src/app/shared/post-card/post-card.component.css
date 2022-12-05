@@ -1,0 +1,25 @@
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card {
+  width: 290px;
+  height: 220px;
+  margin: 10px;
+  background-color: var(--gray-light);
+}
+
+.card-content {
+  height: 100%;
+}
+
+.card-content-header {
+  height: 30%;
+  max-height: 30%;
+  min-height: 30%;
+}
+
+.card-content-body {
+  height: 70%;
+}

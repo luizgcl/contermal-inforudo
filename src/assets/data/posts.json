@@ -1,0 +1,52 @@
+[
+  {
+    "id": "00001",
+    "postedAt": "2022-11-22",
+    "title": "Atualização de The Witcher 3",
+    "content": "Blablabladaclacplacladpfkpereoig",
+    "author": "Luiz Gustavo",
+    "authorImage": "../images/creators/luiz.jpg",
+    "views": 0,
+    "likes": 0
+  },
+  {
+    "id": "00002",
+    "postedAt": "2022-11-23",
+    "title": "Principais dicas de Warzone 2.0",
+    "content": "Blablabladaclacplacladpfkpereoig",
+    "author": "Nando Brandão",
+    "authorImage": "../images/creators/lucas.jpg",
+    "views": 0,
+    "likes": 0
+  },
+  {
+    "id": "00003",
+    "postedAt": "2022-11-25",
+    "title": "Dicas de sobrevicência no Project Zombloid",
+    "content": "Blablabladaclacplacladpfkpereoig",
+    "author": "Nando Brandão",
+    "authorImage": "../images/creators/lucas.jpg",
+    "views": 0,
+    "likes": 0
+  },
+  {
+    "id": "00004",
+    "postedAt": "2022-11-30",
+    "title": "Ryzen X Intel: Qual compensa nos dias atuais?",
+    "content": "Blablabladaclacplacladpfkpereoig",
+    "author": "Diogo Shikuma",
+    "authorImage": "../images/creators/diogo.jpg",
+    "views": 0,
+    "likes": 0
+  },
+  {
+    "id": "00005",
+    "postedAt": "2022-12-01",
+    "title": "Final Fantasy XIV",
+    "content": "Blablabladaclacplacladpfkpereoig",
+    "author": "Diogo Shikuma",
+    "authorImage": "../images/creators/diogo.jpg",
+    "views": 0,
+    "likes": 0
+  }
+]

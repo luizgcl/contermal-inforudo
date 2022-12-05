@@ -1,0 +1,30 @@
+<!-- Introdução -->
+<section class="top-space">
+  <article class="">
+    <h1>O que é Contermal Inforudo?</h1>
+    <p>Quando grandes mentes se encontram elas geram grandes ideias, mas isso não acontece aqui. Nando Brandão, Luiz Gustavo e Diogo Shikuma se juntam para falar sobre seu cotidiano e cultura pop.</p>
+  </article>
+</section>
+<!-- Principais posts -->
+<section>
+  <h1>Principais posts</h1>
+  <article
+    class="d-flex flex-row justify-content-center"
+  >
+    <PostCard
+      *ngFor="let post of mostViewedPosts"
+      [post]="post">
+    </PostCard>
+  </article>
+</section>
+<section>
+  <h1>Recentes</h1>
+  <article
+    class="d-flex flex-row justify-content-center"
+  >
+    <PostCard
+      *ngFor="let post of recentPosts"
+      [post]="post">
+    </PostCard>
+  </article>
+</section>

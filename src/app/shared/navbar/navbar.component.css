@@ -1,0 +1,28 @@
+nav {
+  height: 8vh;
+  background-color: var(--gray-dark);
+}
+
+.logo-content {
+  width: 300px;
+  height: 6vh;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+}
+
+ul > li {
+  margin: 0.75rem;
+}
+
+.nav-link > a {
+  color: #fff;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #d8d8d8;
+  cursor: pointer;
+}

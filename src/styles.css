@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('./core.css');
+
+:root {
+  --blue-primary: #0489BC;
+  --blue-dark: #03658B;
+
+  --gray-light: #9B9B9B;
+  --gray-primary: #6D6D6D;
+  --gray-dark: #363636;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--gray-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.button-link {
+  color: var(--blue-primary);
+  border: 2px solid var(--blue-primary);
+  border-radius: 0.75rem;
+  transition: 0.6s;
+}
+
+.button-link:is(:hover, :active) {
+  background-color: var(--blue-primary);
+  color: white;
+}
+
+.button-primary {
+  color: white;
+  background-color: var(--blue-primary);
+  border-radius: 0.5rem;
+  transition: 0.8s;
+}
+
+.button-primary:is(:hover, :active) {
+  color: white;
+  background-color: var(--blue-dark);
+}

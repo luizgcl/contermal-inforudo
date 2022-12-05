@@ -1,0 +1,18 @@
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #e8e8e8;
+  margin-bottom: 0.05rem;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.image   {
+  width: 150px;
+  height: auto;
+  border-radius: 5%;
+}
