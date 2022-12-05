@@ -1,5 +1,5 @@
 export interface Post {
-  id: string,
+  id: number;
   title: string;
   content: string;
   postedAt: Date;
@@ -8,4 +8,11 @@ export interface Post {
   imagePath?: string;
   views: number;
   likes: number;
+}
+
+export let posts: Array<Post> = [];
+
+export function updatePost(newPosts: Array<Post>) {
+  posts = newPosts
+  return posts
 }

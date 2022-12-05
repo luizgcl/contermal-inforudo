@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../constants/posts';
 import { PostService } from '../services/post.service';
+import { RouterService } from '../services/router.service';
 
 @Component({
   selector: 'app-posts',
@@ -16,6 +17,7 @@ export class PostsComponent implements OnInit {
 
   constructor(
     private postsService: PostService,
+    private routerService: RouterService
   ) { }
 
   ngOnInit(): void {

@@ -5,7 +5,7 @@ h3 {
 
 .card {
   width: 290px;
-  height: 220px;
+  height: 235px;
   margin: 10px;
   background-color: var(--gray-light);
 }
@@ -22,4 +22,5 @@ h3 {
 
 .card-content-body {
   height: 70%;
+  display: inline-block;
 }
