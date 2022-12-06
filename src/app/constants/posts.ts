@@ -1,5 +1,6 @@
 export interface Post {
   id: number;
+  contentHeader?: string;
   title: string;
   content: string;
   postedAt: Date;

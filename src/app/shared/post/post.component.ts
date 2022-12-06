@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnDestroy, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -21,7 +22,8 @@ export class PostComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(
     private route: ActivatedRoute,
     private postsService: PostService,
-    private routerService: RouterService
+    private routerService: RouterService,
+    private datePipe: DatePipe
   ) {}
 
   ngOnInit(): void {
@@ -32,18 +34,17 @@ export class PostComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-      this.post.content = this.post.content
-      .replace('\n', '<br/>')
-      .replace(':title:', '<h1>')
-      .replace(':/title:', '</h1>');
-
-      this.content.nativeElement.innerHTML = `
+      this.content.nativeElement.innerText = `
         ${this.post.content}
       `
   }
 
   backPage() {
     this.routerService.backPage();
+  }
+
+  get postDate() {
+    return this.datePipe.transform(this.post.postedAt, "dd 'de' MMMM 'de' yyyy")
   }
 
 

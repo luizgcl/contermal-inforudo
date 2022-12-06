@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule, EVENT_MANAGER_PLUGINS } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,10 @@ import { PostsComponent } from './posts/posts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostService } from './services/post.service';
 import { RouterService } from './services/router.service';
+import ptBr from '@angular/common/locales/pt';
+import { DatePipe, registerLocaleData } from '@angular/common';
 
+registerLocaleData(ptBr);
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,9 @@ import { RouterService } from './services/router.service';
   ],
   providers: [
     PostService,
-    RouterService
+    RouterService,
+    DatePipe,
+    { provide: LOCALE_ID, useValue: 'pt' }
   ],
   bootstrap: [AppComponent]
 })

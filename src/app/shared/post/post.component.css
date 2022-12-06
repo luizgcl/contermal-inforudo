@@ -2,3 +2,15 @@ h1 {
   font-size: 28px;
   font-weight: bold;
 }
+
+.image-header {
+  width: 46.875rem;
+  height: auto;
+  margin-bottom: 2.75rem;
+}
+
+.post-content {
+  width: 46.875rem;
+  font-size: 1.25rem;
+  line-height: 19px;
+}

@@ -1,5 +1,5 @@
 footer {
-  background-color: #111;
+  background-color: var(--gray-dark);
   height: auto;
   padding-top: 40px;
   color: #fff;
@@ -32,7 +32,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem 0 3rem 0;
+  margin: 1rem 0 1rem 0;
 }
 
 .socials li {
@@ -54,7 +54,7 @@ footer {
 }
 
 .footer-bottom {
-  background-color: #000;
+  background-color: var(--gray-dark);
   padding: 20px 0;
   text-align: center;
 }

@@ -52,3 +52,7 @@ a {
   color: white;
   background-color: var(--blue-dark);
 }
+
+.container {
+  width: 70% !important;
+}

@@ -1,34 +1,28 @@
 <section class="top-space">
-  <header
-    class="d-flex flex-row justify-content-start mb-5"
-  >
-    <button
-      type="button"
-      class="button button-primary border-0"
-      (click)="backPage()"
-      >
-      <i class="bi bi-arrow-bar-left"></i>
-      Voltar
-    </button>
-  </header>
-  <h1 class="text-center">
-    {{ post.title }}
-  </h1>
-  <article class="d-flex flex-column gap-2 justify-content-center align-items-start">
-    <span
-      class="">
-      Publicado por
+  <article class="d-flex flex-column gap-2 justify-content-center align-items-center">
+    <img
+      *ngIf="post.contentHeader"
+      [src]="post.contentHeader"
+      class="image-header"
+    />
+    <span class="text-center mb-1">
+      <h1>
+        {{ post.title }}
+      </h1>
     </span>
-    <div
-      class="d-flex flex-row gap-2 align-items-center"
+    <p class="text-center post-content" #content></p>
+    <span
+      class="d-flex flex-row gap-2 justify-content-start align-items-center"
     >
       <img
         [src]="post.authorImage"
         class="rounded-3"
         width="64"
       />
-      <b>{{ post.author }}</b>
-    </div>
+      <span class="d-flex flex-column gap-1">
+        <b>Publicado por: {{ post.author }}</b>
+        <h6>Em: {{ postDate }}</h6>
+      </span>
+    </span>
   </article>
-  <p class="top-space text-center" #content></p>
 </section>

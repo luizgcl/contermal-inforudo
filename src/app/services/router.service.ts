@@ -1,3 +1,4 @@
+import { title } from 'src/app/constants/constants';
 import { Injectable } from '@angular/core';
 import { NavigationStart, Router, RouterEvent } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -18,6 +19,7 @@ export class RouterService {
           if (urlIndex != -1)
             this.navigationList.slice(urlIndex, 1);
           this.navigationList.push(event.url);
+          document.title = title;
         }
       });
     }

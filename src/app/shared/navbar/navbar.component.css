@@ -1,6 +1,8 @@
 nav {
   height: 8vh;
   background-color: var(--gray-dark);
+  top: 0;
+  position: sticky;
 }
 
 .logo-content {
@@ -23,6 +25,6 @@ ul > li {
 }
 
 .nav-link:hover {
-  color: #d8d8d8;
+  color: #d7d7d7;
   cursor: pointer;
 }
