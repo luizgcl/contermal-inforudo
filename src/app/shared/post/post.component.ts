@@ -34,19 +34,28 @@ export class PostComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-      this.content.nativeElement.innerText = `
-        ${this.post.content}
-      `
+      setInterval(() => {
+        if (this.post) {
+          this.content.nativeElement.innerText = `
+            ${this.post.content}
+          `
+        }
+      }, 5);
   }
 
   backPage() {
     this.routerService.backPage();
   }
 
-  get postDate() {
-    return this.datePipe.transform(this.post.postedAt, "dd 'de' MMMM 'de' yyyy")
+  onKeypressEvent(event: any) {
+    if (event.keyCode === 27) {
+      this.backPage();
+    }
   }
 
+  get postDate() {
+    return this.datePipe.transform(this.post.postedAt, "dd 'de' MMMM 'de' yyyy");
+  }
 
   ngOnDestroy(): void {
       this.subscription.unsubscribe();

@@ -15,6 +15,7 @@ import { PostService } from './services/post.service';
 import { RouterService } from './services/router.service';
 import ptBr from '@angular/common/locales/pt';
 import { DatePipe, registerLocaleData } from '@angular/common';
+import { FindPostComponent } from './shared/find-post/find-post.component';
 
 registerLocaleData(ptBr);
 @NgModule({
@@ -24,7 +25,8 @@ registerLocaleData(ptBr);
     PostComponent,
     PostCardComponent,
     AboutComponent,
-    PostsComponent
+    PostsComponent,
+    FindPostComponent
   ],
   imports: [
     BrowserModule,

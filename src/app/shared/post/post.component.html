@@ -1,5 +1,11 @@
-<section class="top-space">
-  <article class="d-flex flex-column gap-2 justify-content-center align-items-center">
+<section
+  class="top-space"
+>
+  <article
+    *ngIf="post"
+    class="d-flex flex-column gap-2 justify-content-center align-items-center"
+    (window:keydown)="onKeypressEvent($event)"
+    >
     <img
       *ngIf="post.contentHeader"
       [src]="post.contentHeader"
@@ -20,8 +26,8 @@
         width="64"
       />
       <span class="d-flex flex-column gap-1">
-        <b>Publicado por: {{ post.author }}</b>
-        <h6>Em: {{ postDate }}</h6>
+        <span>Publicado por: <b>{{ post.author }}</b></span>
+        <h6>Em: <b>{{ postDate | titlecase}}</b></h6>
       </span>
     </span>
   </article>

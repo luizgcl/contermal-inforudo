@@ -54,12 +54,13 @@ footer {
 }
 
 .footer-bottom {
-  background-color: var(--gray-dark);
+  background-color: var(--gray-bold);
   padding: 20px 0;
   text-align: center;
 }
 
 .footer-bottom p {
+  margin-top: 1.25rem;
   font-size: 14px;
   word-spacing: 2px;
   text-transform: capitalize;
