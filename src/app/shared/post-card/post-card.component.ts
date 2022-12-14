@@ -18,7 +18,7 @@ export class PostCardComponent {
   ) {}
 
   get description() {
-    return `${this.post.content.slice(0, 34)}...`;
+    return `${this.post.content.replace(/<[^>]*>/g, '').slice(0, 34)}...`;
   }
 
   viewPost() {

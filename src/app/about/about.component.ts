@@ -11,7 +11,7 @@ export class AboutComponent {
     {
       name: 'Lucas "Nando Brandão" Dias',
       rule: 'Criador de Conteúdo',
-      description: 'Projetista, o cara que faz vários projetinhos e organiza os posts.',
+      description: 'Projetista, o cara que faz vários projetinhos e organiza os posts, além de ajudar nos quesitos de UI e UX do nosso blog.',
       imagePath: '../../assets/images/creators/lucas.jpg'
     },
     {
@@ -23,7 +23,7 @@ export class AboutComponent {
     {
       name: 'Luiz Gustavo Cardoso Leme',
       rule: 'Criador de Conteúdo',
-      description: 'Pogramador, o cara que desenvolveu todo o esquema do site e nas horas vagas "faz uns posts aí".',
+      description: 'Pogramador, o cara que desenvolveu todo o esquema do site e nas horas vagas tenta criar um conteúdo.',
       imagePath: '../../assets/images/creators/luiz.jpg'
     }
   ]

@@ -34,13 +34,13 @@ export class PostComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-      setInterval(() => {
+      setTimeout(() => {
         if (this.post) {
-          this.content.nativeElement.innerText = `
+          this.content.nativeElement.innerHTML = `
             ${this.post.content}
-          `
+            `
         }
-      }, 5);
+      }, 50);
   }
 
   backPage() {

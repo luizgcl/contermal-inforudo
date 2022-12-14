@@ -14,3 +14,17 @@ h1 {
   font-size: 1.25rem;
   line-height: 19px;
 }
+
+.post-content > h1, h2, h3, h4 {
+  font-weight: bold;
+}
+
+.post-content > h4 {
+  font-size: 1.45rem;
+}
+
+.post-content > p {
+  width: 46.875rem;
+  font-size: 1.25rem;
+  line-height: 20px;
+}
