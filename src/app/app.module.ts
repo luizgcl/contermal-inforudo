@@ -19,6 +19,7 @@ import { DatePipe, registerLocaleData } from '@angular/common';
 import { FindPostComponent } from './shared/find-post/find-post.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { PatchesComponent } from './patches/patches.component';
 
 registerLocaleData(ptBr);
 @NgModule({
@@ -31,6 +32,7 @@ registerLocaleData(ptBr);
     PostsComponent,
     FindPostComponent,
     NavbarComponent,
+    PatchesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
-import { title } from 'src/app/constants/constants';
 import { Injectable } from '@angular/core';
-import { NavigationStart, Router, RouterEvent } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { title } from '../constants/constants'
 
 @Injectable({
   providedIn: 'root'

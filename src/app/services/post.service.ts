@@ -45,6 +45,30 @@ export class PostService {
     }
   }
 
+  async likePost(id: number) {
+    const post = await this.getPost(id);
+    if (!this.localPost.hasLikedPost(id)) {
+      this.posts.updatePost(post!.id, {
+        likes: post!.likes+1,
+        views: post!.views
+      })
+      this.posts.loadPostInfos((await this.getPosts())!)
+      this.localPost.setLikedPost(id, true);
+    }
+  }
+
+  async unlikePost(id: number) {
+    const post = await this.getPost(id);
+    if (this.localPost.hasLikedPost(id)) {
+      this.posts.updatePost(post!.id, {
+        likes: post!.likes-1,
+        views: post!.views
+      })
+      this.posts.loadPostInfos((await this.getPosts())!)
+      this.localPost.setLikedPost(id, false);
+    }
+  }
+
   private async nextId(): Promise<number> {
     const posts = await this.getPosts()
 
@@ -106,7 +130,10 @@ export class PostFirebaseService {
 export class PostLocalStorage {
 
   setLikedPost(id: number, liked: boolean) {
-    localStorage.setItem(`likedPost@${id}`, liked ? 'true' : 'false');
+    if (liked)
+      localStorage.setItem(`likedPost@${id}`, 'true');
+    else
+      localStorage.removeItem(`likedPost@${id}`)
   }
 
   setViewedPost(id: number) {

@@ -17,6 +17,19 @@
       </h1>
     </span>
     <p class="text-center post-content" [innerHTML]="post.content"></p>
+    <span class="d-flex flex-row justify-content-between w-default">
+      <span>
+        <i
+          [ngClass]="likedPost ? 'bi bi-hand-thumbs-up-fill pointer' : 'bi bi-hand-thumbs-up pointer'"
+          (click)="handleClickLike()"
+        ></i>
+        {{ post.likes }} Curtidas
+      </span>
+      <span>
+        <i class="bi bi-eye"></i>
+        {{ post.views }} Visualizações
+      </span>
+    </span>
     <span
       class="d-flex flex-row gap-2 justify-content-start align-items-center"
     >

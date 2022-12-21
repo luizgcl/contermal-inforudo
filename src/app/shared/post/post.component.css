@@ -28,3 +28,11 @@ h1 {
   font-size: 1.25rem;
   line-height: 20px;
 }
+
+.w-default {
+  width: 46.875rem;
+}
+
+.pointer {
+  cursor: pointer;
+}

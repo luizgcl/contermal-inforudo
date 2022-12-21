@@ -1,0 +1,13 @@
+<section class="top-space h-improvised">
+  <header>
+    <h1>Notas de atualização</h1>
+    <span>Aqui você irá encontrar todas as notas referentes a atualizações do nosso blog</span>
+  </header>
+  <div class="top-space">
+    <article *ngFor="let note of notes">
+      <h2>{{ note.title }}</h2>
+      <hr/>
+      <p [innerText]="note.content"></p>
+    </article>
+  </div>
+</section>

@@ -1,27 +1,37 @@
 <article
-  class="d-flex flex-column align-content-between gap-1 p-3 card"
+  class="d-flex flex-column align-content-between card"
 >
-  <span
-    class="d-flex flex-column gap-2 card-content">
-    <h3 class="card-content-header">{{ post.title }}</h3>
-      <p
-        class="card-content-body mx-2"
-      >
-        {{ description }}
-      </p>
-  </span>
-  <footer
-    class="d-flex flex-row justify-content-between align-items-center mt-1"
+  <header>
+    <img
+      [src]="post.contentHeader"
+      class="card-image"
+    />
+  </header>
+  <div
+    class="p-3 d-flex flex-column gap-1 align-content-between card-content"
   >
-    <span>
-      <i class="bi bi-hand-thumbs-up"></i> {{ post.likes }}
-      <i class="bi bi-eye"></i> {{ post.views }}
+    <span
+      class="d-flex flex-column gap-2 card-content">
+      <h3 class="card-content-header">{{ post.title }}</h3>
+        <p
+          class="card-content-body mx-2"
+        >
+          {{ description }}
+        </p>
     </span>
-    <a
-      class="button button-primary"
-      (click)="viewPost()"
+    <footer
+      class="d-flex flex-row justify-content-between align-items-center mt-1"
     >
-      Continue lendo...
-    </a>
-  </footer>
+      <span>
+        <i [ngClass]="likedPost ? 'bi bi-hand-thumbs-up-fill pointer' : 'bi bi-hand-thumbs-up pointer'" (click)="handleClickLike()"></i> {{ post.likes }}
+        <i class="bi bi-eye"></i> {{ post.views }}
+      </span>
+      <a
+        class="button button-primary"
+        (click)="viewPost()"
+      >
+        Continue lendo...
+      </a>
+    </footer>
+  </div>
 </article>
