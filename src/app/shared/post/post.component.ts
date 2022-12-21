@@ -1,5 +1,5 @@
 import { DatePipe } from '@angular/common';
-import { Component, OnDestroy, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { title } from 'src/app/constants/constants';
@@ -10,9 +10,10 @@ import { RouterService } from 'src/app/services/router.service';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
-export class PostComponent implements OnInit, OnDestroy, AfterViewInit {
+export class PostComponent implements OnInit, OnDestroy {
 
   post!: Post;
   subscription!: Subscription;
@@ -31,16 +32,6 @@ export class PostComponent implements OnInit, OnDestroy, AfterViewInit {
         this.postsService.getPost(param['id']).then((post) => this.post = post!)
         .then(() => document.title = title + ' | ' + this.post.title);
       });
-  }
-
-  ngAfterViewInit(): void {
-      setTimeout(() => {
-        if (this.post) {
-          this.content.nativeElement.innerHTML = `
-            ${this.post.content}
-            `
-        }
-      }, 50);
   }
 
   backPage() {
